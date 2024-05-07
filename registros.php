@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
+<?php
+
+
+
+if (isset ($_POST["ingresar"]) ){
+  for ($i=0;$i<1;$i++){
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $nombre[$i] = $_POST["nombre"];
+      $cta[$i] = $_POST["cta"];
+      
+      
+    echo "Bienvenido " . $nombre[$i] ;
+    }
+  }
     
-</body>
-</html>
+  
+  }
+      
+  
+      
+  else{
+  
+  header("Refresh: 3; url=login.html");
+  echo "contraseña y/o user incorrectas. Intente nuevamente.";
+  
+  }
+  
+
+?>
