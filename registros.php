@@ -1,29 +1,26 @@
 <?php
 
+$usuario="yato";
+$contraseña="god";
+$nombre = $_POST["nombre"];
+    $cta = $_POST["cta"];
 
-
-if (isset ($_POST["ingresar"]) ){
-  for ($i=0;$i<1;$i++){
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $nombre[$i] = $_POST["nombre"];
-      $cta[$i] = $_POST["cta"];
-      
-      
-    echo "Bienvenido " . $nombre[$i] ;
-    }
-  }
+if (isset ($_POST["ingresar"]) && ($usuario==$nombre) && ($contraseña==$cta)){
     
-  
-  }
       
-  
       
-  else{
+ echo "Bienvenido " . $nombre;
+
+
+}
+    else{
   
-  header("Refresh: 3; url=login.html");
-  echo "contraseña y/o user incorrectas. Intente nuevamente.";
-  
-  }
+        header("Refresh: 3; url=registrarse.php");
+        echo "contraseña y/o user incorrectas. Intente nuevamente.";
+        
+        }
+    
+   
   
 
 ?>
